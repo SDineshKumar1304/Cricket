@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket Advice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Shot: <span>{{ shot }}</span></h1>
+    {% for section in advice %}
+      <h2>{{ section.aspect }}</h2>
+      <ul>
+        {% for detail in section.details %}
+          <li>{{ detail }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 40px;
+    }
+
+    .container {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      color: #00bcd4;
+    }
+
+    h2 {
+      color: #4db6ac;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    li {
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    span {
+      color: #00bcd4;
+    }
+  </style>
+</body>
+
+</html>
